@@ -1,0 +1,49 @@
+# BEGIN WP Hide & Security Enhancer
+<IfModule mod_rewrite.c> 
+RewriteEngine On 
+RewriteBase /yoruproject/ 
+#WriteCheckString:1605749692_90392
+RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
+
+RewriteRule ^fyrtodee/(.+) /yoruproject/wp-content/themes/twentytwenty-child/$1 [L,QSA]
+
+RewriteRule ^chunecha/(.+) /yoruproject/wp-content/themes/twentytwenty/$1 [L,QSA]
+
+RewriteRule ^webedrel/(.+) /yoruproject/wp-content/plugins/$1 [L,QSA]
+
+RewriteRule ^ogruwhoo/(.+) /yoruproject/wp-includes/$1 [L,QSA]
+
+RewriteRule ^keeptewo/(.+) /yoruproject/wp-content/uploads/$1 [L,QSA]
+
+RewriteRule ^soathept.php /yoruproject/wp-comments-post.php [L,QSA]
+
+RewriteRule ^phegligo/(.+) /yoruproject/wp-content/$1 [L,QSA]
+
+RewriteCond %{REQUEST_URI} ([^/]+)/(feed|rdf|rss|rss2|atom)/?$  [OR]
+RewriteCond %{REQUEST_URI} ^/(feed|rdf|rss|rss2|atom)/?$
+RewriteRule . /yoruproject/index.php?wph-throw-404 [L]
+
+RewriteCond %{REQUEST_URI} /yoruproject/yoru-login$
+RewriteRule ^(.*)$ /yoruproject/yoru-login/ [R=301,L]
+RewriteRule ^yoru-login(.*) /yoruproject/wp-admin$1 [L,QSA]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^wp-admin(.+) /yoruproject/index.php?wph-throw-404 [L]
+
+</IfModule> 
+
+# END WP Hide & Security Enhancer
+
+# BEGIN WordPress
+# Arahan (baris) antara "BEGIN WordPress" dan "END WordPress"
+# dihasilkan secara dinamis, dan hanya dapat dimodifikasi melalui filter WordPress.
+# Setiap perubahan pada arahan di antara penanda berikut akan ditimpa.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /yoruproject/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /yoruproject/index.php [L]
+</IfModule>
+
+# END WordPress

@@ -1,0 +1,100 @@
+/*
+Theme Name: Twenty Twenty Child
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Template: twentytwenty
+Author: Agus Andri Putra
+Author URI: http://andriputra.com
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog,one-column,custom-background,custom-colors,custom-logo,custom-menu,editor-style,featured-images,footer-widgets,full-width-template,rtl-language-support,sticky-post,theme-options,threaded-comments,translation-ready,block-styles,wide-blocks,accessibility-ready
+Version: 1.0.1605671100
+Updated: 2020-11-18 03:45:00
+
+*/
+
+#site-header, #site-footer{
+    display: none;
+}
+body.homepage {
+    background-image: url('./assets/img/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+body.homepage::before{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.76);
+    z-index: -1;
+}
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+.content .image-home-logo{
+    text-align: center;
+    width: 10%;
+    margin: 40px auto 0px;
+}
+.content .image-home-logo img{
+    display: inline-block;
+}
+.content .image-home-logo-name h4{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+.home-content{
+    display: block;
+}
+.home-content .content-list-item{
+    display: inline-table;
+    width: 30%;
+    margin: 0px 16px 32px;
+    text-align: center;
+}
+.home-content .content-list-item .item-image{
+    width: 50%;
+    margin: 0 auto 20px;
+}
+.home-content .content-list-item .item-button a{
+    display: block;
+    color: #ffffff;
+    background-color: #1d1d1d;
+    padding: 15px 0px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #383838;
+}
+.home-content .content-list-item .item-button a:hover{
+    display: block;
+    color: #303030;
+    background-color: #c1c1c1;
+    padding: 15px 0px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .wrapper {
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .content .image-home-logo {
+        width: 30%;
+    }
+    .home-content .content-list-item {
+        display: block;
+        width: 100%;
+        margin: 0px 0px 30px;
+        text-align: center;
+        border: 1px solid #383838;
+        border-radius: 4px;
+        padding: 20px 0px 0px;
+    }
+    .home-content .content-list-item .item-image {
+        width: 24%;
+    }
+}
