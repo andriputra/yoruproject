@@ -10,7 +10,14 @@ Version: 1.0.1605671100
 Updated: 2020-11-18 03:45:00
 
 */
-
+@font-face { 
+    font-family: Bebas Regular; 
+    src: url('./assets/fonts/bebas/Bebas-Regular.ttf'); 
+    font-weight: normal; 
+}  
+body{
+    font-family: 'Bebas Regular', sans-serif;
+}  
 #site-header, #site-footer{
     display: none;
 }
@@ -37,17 +44,27 @@ body.homepage::before{
 }
 .content .image-home-logo{
     text-align: center;
-    width: 10%;
+    width: 16%;
     margin: 40px auto 0px;
 }
 .content .image-home-logo img{
     display: inline-block;
+    filter: invert(1);
 }
 .content .image-home-logo-name h4{
     color: #ffffff;
     text-align: center;
     margin-top: 0px;
+    margin-bottom: 0px;
+}
+.content .text-name{
+    text-align: center;
+    color: #ffffff;
+}
+.content .text-name h2{
+    margin-top: 0px;
     margin-bottom: 60px;
+    font-size: 25px;
 }
 .home-content{
     display: block;
@@ -59,7 +76,7 @@ body.homepage::before{
     text-align: center;
 }
 .home-content .content-list-item .item-image{
-    width: 50%;
+    width: 30%;
     margin: 0 auto 20px;
 }
 .home-content .content-list-item .item-button a{

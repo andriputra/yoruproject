@@ -18,10 +18,13 @@ get_header();
         <div class="wrapper">
             <div class="content">
                 <div class="image-home-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="img-responsive"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/yorulogo.png" class="img-responsive"/>
                 </div>
-                <div class="image-home-logo-name">
+                <!-- <div class="image-home-logo-name">
                     <h4>@yoruproject.id</h4>
+                </div> -->
+                <div class="text-name">
+                    <h2>#BLACKTHATMATTERS</h2>
                 </div>
                 <?php if (have_rows('button_cta')) :
                     echo '<div class="home-content">';
