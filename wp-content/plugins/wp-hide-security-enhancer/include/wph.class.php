@@ -1488,7 +1488,7 @@
             function update_post_metadata ( $check, $object_id, $meta_key, $meta_value, $prev_value)
                 {
                     global $wpdb;
-                    
+
                     $meta_type      =   'post';
                     
                     $table          = _get_meta_table( $meta_type );

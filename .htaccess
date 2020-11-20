@@ -2,10 +2,10 @@
 <IfModule mod_rewrite.c> 
 RewriteEngine On 
 RewriteBase /yoruproject/ 
-#WriteCheckString:1605749692_90392
+#WriteCheckString:1605876009_79917
 RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
 
-RewriteRule ^fyrtodee/(.+) /yoruproject/wp-content/themes/twentytwenty-child/$1 [L,QSA]
+RewriteRule ^mylayout/(.+) /yoruproject/wp-content/themes/twentytwenty-child/$1 [L,QSA]
 
 RewriteRule ^chunecha/(.+) /yoruproject/wp-content/themes/twentytwenty/$1 [L,QSA]
 

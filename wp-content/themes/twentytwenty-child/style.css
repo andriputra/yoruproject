@@ -21,22 +21,28 @@ body{
 #site-header, #site-footer{
     display: none;
 }
-body.homepage {
-    background-image: url('./assets/img/bg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
+.fullpage {
+    padding-bottom: 120px;
+	background: #020507;
+    overflow: hidden;
+    height: 100vh;
 }
-body.homepage::before{
-    position: fixed;
-    height: 100%;
+.fullpage .pg-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100% !important;
+	width: 100% !important;
+	opacity: .12;
+}
+.fullpage .shadow-overlay {
+	display: none;
+}
+.homepage{
     width: 100%;
-    display: block;
-    content: '';
-    background-color: rgba(0, 0, 0, 0.76);
-    z-index: -1;
+    height: 100%;
+    display: table;
+    position: relative;
 }
 .wrapper{
     width: 1100px;
@@ -83,18 +89,51 @@ body.homepage::before{
     display: block;
     color: #ffffff;
     background-color: #1d1d1d;
-    padding: 15px 0px;
+    padding: 12px 0px;
     text-decoration: none;
     border-radius: 4px;
     border: 1px solid #383838;
+    font-size: 24px;
+    letter-spacing: 3px;
 }
 .home-content .content-list-item .item-button a:hover{
     display: block;
     color: #303030;
     background-color: #c1c1c1;
-    padding: 15px 0px;
+}
+.footer{
+    padding: 25px 0px;
+    background: rgb(19 19 19 / 74%);
+    text-align: center;
+    margin-top: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    bottom: 0px;
+}
+.footer .social-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer .social-list a.social{
+    flex: 4% 0 0;
+    color: #ffffff;
+    font-size: 23px;
+}
+.footer .social-list a.social.fb:hover{
+    color: #4677e4;
+}
+.footer .social-list a.social.tw:hover{
+    color: #64afe4;
+}
+.footer .social-list a.social.ig:hover{
+    color: #8a3ab9;;
 }
 @media (min-width: 320px) and (max-width: 767px) {
+    .fullpage {
+        padding-bottom: 0px;
+    }
     .wrapper {
         width: 100%;
         padding: 0px 20px;
@@ -109,9 +148,23 @@ body.homepage::before{
         text-align: center;
         border: 1px solid #383838;
         border-radius: 4px;
-        padding: 20px 0px 0px;
+        padding: 0px 0px 0px;
     }
     .home-content .content-list-item .item-image {
-        width: 24%;
+        width: 15%;   
+        margin: 10px auto 10px;
+    }
+    .content .text-name h2{
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
+    .home-content .content-list-item .item-button a{
+        font-size: 18px;
+    }
+    .footer {
+        padding: 15px 0px;
+    }
+    .footer .social-list{
+        justify-content: space-evenly;
     }
 }

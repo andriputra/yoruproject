@@ -4,7 +4,7 @@ Donate link: https://www.nsp-code.com/
 Tags: wordpress hide, hide, security, improve security, hacking, wp hide, custom login, wp-loging.php, wp-admin, admin hide, login change, 
 Requires at least: 2.8
 Tested up to: 5.5.3
-Stable tag: 1.6.2.0.2
+Stable tag: 1.6.2.0.3
 License: GPLv2 or later
 
 Hide and increase Security for your WordPress site using smart techniques. No files are changed on your server. Change default admin and wp-login urls
@@ -269,7 +269,7 @@ A demo instance can be found at <a target="_blank" href="https://demo.wp-hide.co
 
 = Can I use the plugin on my Nginx server ?  =
 
-The free plugin can't generate Nginx rewrite rules. It works with Apache, LiteSpeed, IIS and compatible.
+If the server runs full-stack Nginx, the free plugin can't generate the required format Nginx rewrite rules. It works with Apache, LiteSpeed, IIS, Nginx as a reverse proxy and compatible.
 
 = Can I still update WordPress, my plugins and themes?  =
 
@@ -348,6 +348,9 @@ Please get in touch with us and we'll do our best to include it for a next versi
 2. Sample front html code.
 
 == Changelog ==
+
+= 1.6.2.0.3 =
+* Compatibility file with Oxygen editor
 
 = 1.6.2.0.2 =
 * Fix: Check the replacements for update_post_metadata method on text and array types.

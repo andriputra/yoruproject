@@ -134,6 +134,8 @@
                     
                     include_once(WPH_PATH . 'compatibility/wepos.php');
                     
+                    include_once(WPH_PATH . 'compatibility/oxygen.php');
+                    
                     /**
                     * Themes
                     */
